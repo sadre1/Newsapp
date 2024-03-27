@@ -45,7 +45,7 @@ const Footer = () => {
               {section.items.map((item, i) => (
                 <li
                   key={i}
-                  className="py-1 dark:text-gray-500 text-gray-900 hover:text-white"
+                  className="py-1 dark:text-gray-500 text-gray-900 dark:hover:text-white hover:text-gray-400"
                 >
                   {item}
                 </li>
@@ -61,20 +61,27 @@ const Footer = () => {
           </p>
           <form className="flex flex-col sm:flex-row">
             <input
-              className="w-full p-2 mr-4 rounded-md mb-4"
+              className="w-full p-2 mr-4  border ring-black rounded-md mb-4"
               type="email"
               placeholder="Enter email.."
             />
-            <button className="p-2 mb-4">Subscribe</button>
+            <button className="p-2 mb-4 border rounded-md bg-black text-white dark:hover:bg-white dark:hover:text-black hover:bg-gray-600 ">
+              Subscribe
+            </button>
           </form>
         </div>
       </div>
 
       <div className="flex flex-col max-w-[1240px] px-2 py-4 mx-auto justify-between sm:flex-row text-center text-gray-500">
-        <p className="py-4">2022 Workflow, LLC. All rights reserved</p>
+        <p className="py-4">2024 News2Day, LLC. All rights reserved</p>
         <div className="flex justify-between sm:w-[300px] pt-4 text-2xl">
           {items.map((x, index) => {
-            return <x.icon key={index} className="hover:text-white" />;
+            return (
+              <x.icon
+                key={index}
+                className="dark:hover:text-white hover:text-black"
+              />
+            );
           })}
         </div>
       </div>
