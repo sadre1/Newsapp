@@ -17,7 +17,7 @@ export function NewsCarausal() {
 
   const fetchData = async () => {
     let response = await fetch(
-      "https://newsapi.org/v2/everything?q=tesla&from=2024-02-25&sortBy=publishedAt&apiKey=061340a272864862b5d860161b76bec9"
+      "https://newsapi.org/v2/top-headlines?country=in&apiKey=061340a272864862b5d860161b76bec9"
     );
     let data = await response.json();
     setMyNews(data.articles);

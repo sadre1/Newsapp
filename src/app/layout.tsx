@@ -4,6 +4,8 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 const font = DM_Sans({ subsets: ["latin"] });
 import NavBar from "@/components/navBar";
+import { Toaster } from "@/components/ui/toaster";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "News2Day-Home",
@@ -26,6 +28,8 @@ export default function RootLayout({
         >
           <NavBar />
           <div className="mt-16 w-3/4 mx-auto">{children}</div>
+          <Footer />
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>
